@@ -36,11 +36,11 @@ ActiveRecord::Schema.define(version: 20161005083634) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.string   "password"
+    t.string   "password_digest"
     t.integer  "contact"
     t.boolean  "is_admin"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

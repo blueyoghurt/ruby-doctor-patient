@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  #associations
   has_many :appointments
   has_many :doctors, :through => :appointments
 
@@ -10,6 +11,7 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  #public method
   def self.authenticate(params)
     User.find_by_email(params[:email]).try(:authenticate, params[:password])
   end
