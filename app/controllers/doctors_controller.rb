@@ -1,5 +1,8 @@
 class DoctorsController < ApplicationController
+  before_action :is_authenticated
   before_action :set_doctor, only: [:show, :edit, :update, :destroy]
+  before_action :can_edit, only: [:edit, :update, :destroy, :new, :create]
+
 
   # GET /doctors
   # GET /doctors.json
@@ -62,13 +65,22 @@ class DoctorsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_doctor
-      @doctor = Doctor.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_doctor
+    @doctor = Doctor.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def doctor_params
-      params.require(:doctor).permit(:name, :speciality, :contact)
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def doctor_params
+    params.require(:doctor).permit(:name, :speciality, :contact)
+  end
+
+  # decide who can edit a doctor
+  def can_edit
+    unless current_user.is_admin?
+      flash[:danger] = "You do not have permission to do that!"
+      redirect_to doctors_path
     end
+  end
+
 end
