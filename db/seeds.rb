@@ -17,4 +17,12 @@ Doctor.create({"name"=>"Mr.Cat", "speciality"=>"Heart & Vascular (Cardiovascular
 
 
 
+User.find_or_create_by!(email: 'jeremiah@fakeemail.com') do |user|
+  user.first_name = 'Jeremiah'
+  user.last_name = 'Alexander'
+  user.is_admin = true
+  user.password = "password"
+  # user.password_confirmation = "password"
+end
+
 puts "File working but cant create data"
