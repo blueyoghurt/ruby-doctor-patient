@@ -6,9 +6,9 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find_by_id(session[:user_id])
 
-    # if @current_user
-    #   return @current_user
-    # end
+    if @current_user
+      return @current_user
+    end
 
     user_id = session[:user_id]
     @current_user = User.find_by_id(user_id)

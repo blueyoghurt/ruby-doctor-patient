@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'public#index'
+
   # AUTHENTICATION
   get "login" => "sessions#new"
   post "login" => "sessions#create"
@@ -8,7 +10,7 @@ Rails.application.routes.draw do
   # Users - custom routes for users, registration, profile, editing etc
   get "register" => "users#new"
   post "users" => "users#create"
-  get "users/:id" => "users#show"
+  get "profile" => "users#show"
   get "profile/edit" => "users#edit"
   put "profile" => "users#update"
   patch "profile" => "users#update"
