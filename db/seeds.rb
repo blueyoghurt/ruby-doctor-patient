@@ -8,8 +8,11 @@
 
 
 # Doctor.create({"name"=>"Belgien"})
-Doctor.create({"name"=>"Luke", "speciality"=>"Heart & Vascular (Cardiovascular)","contact" =>12345678})
-
+Doctor.create({"name"=>"Luke", "speciality"=>"Brain & Nerves (Neurology)","contact" =>12345678})
+Doctor.create({"name"=>"Wei Ying", "speciality"=>"Bones (Orthopaedics)","contact" =>222222222})
+Doctor.create({"name"=>"Dexter", "speciality"=>"Cancer (Oncology)","contact" =>33333333})
+Doctor.create({"name"=>"Mr.Dog", "speciality"=>"Ear, Nose & Throat (Otorhinolaryngology)","contact" =>44444444})
+Doctor.create({"name"=>"Mr.Cat", "speciality"=>"Heart & Vascular (Cardiovascular)","contact" =>5555555})
 # Appointment_time.create({"time"=>"9 am"})
 
 
