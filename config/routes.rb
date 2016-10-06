@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root 'public#index'
+  get 'help' => 'pages#page'
+
 
   # AUTHENTICATION
   get "login" => "sessions#new"
