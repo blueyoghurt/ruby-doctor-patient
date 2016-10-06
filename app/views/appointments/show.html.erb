@@ -6,9 +6,27 @@
 </p>
 
 <p>
+  <strong>Time:</strong>
+  <%= @appointment.appointment_time.time %>
+</p>
+
+<p>
   <strong>Description:</strong>
   <%= @appointment.description %>
 </p>
+
+<p>
+  <strong>Doctor:</strong>
+  <%= @appointment.doctor.name %>
+</p>
+
+<p>
+  <strong>Speciality:</strong>
+  <%= @appointment.doctor.speciality %>
+</p>
+
+
+
 
 <%= link_to 'Edit', edit_appointment_path(@appointment) %> |
 <%= link_to 'Back', appointments_path %>

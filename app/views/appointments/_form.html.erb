@@ -16,11 +16,6 @@
 </p>
 
 <p>
-  <%= f.label :speciality %><br/>
-  <%= f.select :doctor_id, Doctor.all.collect {|x| [x.speciality,x.id]} , {} %>
-</p>
-
-<p>
   <%= f.label :date %><br>
   <%= f.date_field :date %>
 </p>
