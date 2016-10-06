@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'public#index'
-  get 'help' => 'pages#page'
+  get 'doctor_appointment' => 'public#doctor_appointment'
 
 
   # AUTHENTICATION

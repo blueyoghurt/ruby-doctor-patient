@@ -13,4 +13,10 @@
  */
 
  // Custom bootstrap variables must be set or imported before bootstrap itself.
+
+
+ td, th {
+   padding: 10px;
+   border: 1px solid black;
+ }
 @import "bootstrap";
