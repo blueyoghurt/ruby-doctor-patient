@@ -3,8 +3,9 @@
 <%= form_for @appointment do |f| %>
   <p>
     <%= f.label :speciality %><br/>
-    <%= f.select :doctor_id, Doctor.all.collect {|x| [x.speciality,x.id]} , {} %>
+    <%= f.select :doctor_id, options_from_collection_for_select(Doctor.all, 'id', 'speciality') , {:class => 'form-control'} %>
   </p>
+
 
   <p>
     <%= f.label :name %><br/>
@@ -13,7 +14,7 @@
 
   <p>
   <%= f.label :date %><br>
-  <%= f.text_field :date %>
+  <%= f.date_select :date %>
 </p>
 <p>
   <%= f.label :description %><br>
