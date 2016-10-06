@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     patch 'admin' => "users#toggle_admin", on: :member
   end
 
+  resources :users
   resources :appointment_times
   resources :appointments
   resources :doctors
