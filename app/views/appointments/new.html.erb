@@ -3,7 +3,7 @@
 <%= form_for @appointment do |f| %>
   <p>
     <%= f.label :speciality %><br/>
-    <%= f.select :doctor_id, options_from_collection_for_select(Doctor.all, 'id', 'speciality') , {:class => 'form-control'} %>
+        <%= f.select :doctor_id, Doctor.all.collect {|x| [x.speciality,x.id]} , {} %>
   </p>
 
 
