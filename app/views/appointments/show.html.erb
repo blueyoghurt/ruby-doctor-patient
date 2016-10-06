@@ -7,7 +7,7 @@
 
 <p>
   <strong>Time:</strong>
-  <%= @appointment.appointment_time_id %>
+  <%= @appointment.appointment_time.time %>
 </p>
 
 <p>
@@ -17,7 +17,12 @@
 
 <p>
   <strong>Doctor:</strong>
-  <%= @appointment.doctor_id %>
+  <%= @appointment.doctor.name %>
+</p>
+
+<p>
+  <strong>Speciality:</strong>
+  <%= @appointment.doctor.speciality %>
 </p>
 
 
